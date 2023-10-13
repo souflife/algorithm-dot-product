@@ -1,0 +1,21 @@
+FONCTION dot_product(v1, v2)
+    ps ← 0
+    POUR i DE 1 À LONGUEUR(v1) FAIRE
+        ps ← ps + (v1[i] * v2[i])
+    FIN POUR
+    RETOURNER ps
+FIN FONCTION
+
+ALGORITHME déterminer_orthogonalité(v1, v2)
+    LIRE n (nombre de couples de vecteurs)
+    POUR i DE 1 À n FAIRE
+        LIRE v1 (vecteur 1)
+        LIRE v2 (vecteur 2)
+        ps ← dot_product(v1, v2)
+        SI ps = 0 ALORS
+            AFFICHER "Les vecteurs sont orthogonaux."
+        SINON
+            AFFICHER "Les vecteurs ne sont pas orthogonaux."
+        FIN SI
+    FIN POUR
+FIN ALGORITHME
